@@ -1,10 +1,10 @@
 % batch dcm_peb 2nd level
 % 
-% written by Björn Schott 04/2022
+% written by BjÃ¶rn Schott 04/2022
 
 % for external harddrives in Unix-based systems ... needs to be adapted for Windows
-vol_name = 'ZOMBIE';
-project_dir = strcat('/Volumes/', vol_name, '/projects/FADE_2016/');
+vol_name = 'MYDRIVE';
+project_dir = strcat('/Volumes/', vol_name, '/projects/FADE/');
 tools_dir = strcat(project_dir, 'tools_BS/');
 dcm_tools_dir = strcat(tools_dir, 'DCM_tools/');
 dcm_data_dir = strcat(project_dir, '/analyses_new/DCM/');
