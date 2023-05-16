@@ -1,4 +1,5 @@
 % batch dcm_peb 2nd level
+% based on batch generated with SPM Batch Editor
 % 
 % written by Björn Schott 04/2022
 
@@ -16,12 +17,9 @@ subj_file = strcat(tools_dir, subj_filename);
 [scanner subj_ids age sex age_group age_group3 AiA young old male female verio skyra] = textread(subj_file, '%d%s%d%d%d%d%d%d%d%d%d%d%d', 'delimiter', '\t', 'headerlines', 1);
 nsubjects   = length(subj_ids)
 
-% specify design matrix
-% col1 = ones(length(subj_ids),1);        % column 1, should be all 1
-
 clear matlabbatch
 
-% define batch, with covariates specified manually
+% define batch, with covariates (if any) specified manually
 matlabbatch{1}.spm.dcm.peb.specify.name = 'Memory_A_B_age-only';
 matlabbatch{1}.spm.dcm.peb.specify.model_space_mat = {strcat(dcm_model_dir, 'GCM_full.mat')};
 matlabbatch{1}.spm.dcm.peb.specify.dcm.index = 1;
