@@ -1,12 +1,12 @@
 % fade_dcm_prepare_data4upload.m
 % anonymize GCM file by replacing subject IDs with random IDs
 % 
-% written by Björn Schott 05/2023
+% written by BjÃ¶rn Schott 05/2023
 
 % to be adjusted for each cohort
 cohort_dir = 'DCM_emppriors_cohort3_3regions';
-subjects_dir = '/Volumes/ArmorATD/projects/FADE_2016/subjects_verio/';
-new_sids_filename = 'new_subj_ids_cohort3.txt';
+subjects_dir = '/Volumes/MYDRIVE/projects/FADE/subjects_verio/';
+new_sids_filename = 'new_subj_ids_cohort3.txt'; 
 new_subjects_dir = '/Volume/MYDRIVE/fmri_data/FADE/subjects_cohort3/';
 
 % same for all cohorts
@@ -21,6 +21,7 @@ cwd = pwd;
 cd(GCM_dir);
 load GCM_full.mat
 num_subjs = length(GCM);
+% read text file with random subject IDs, generated with ChatGPT
 new_subj_ids = textread(new_sids_filename, '%s', 'delimiter', '\n');
 
 for subj = 1 num_subjs
