@@ -1,6 +1,6 @@
 function [Z, p] = fisherztest(r1, r2, n1, n2)
 % Computes Fisher's Z and corresponding p value from two correlation 
-% coefficients. Sample size must be provided.
+% coefficients. Sample sizes must be provided.
 
 % Compute Fisher's z-scores
 z1 = 0.5 * log((1 + r1) / (1 - r1));
