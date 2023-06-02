@@ -1,4 +1,4 @@
-% Compute correlation coefficients and Bayes factors
+% Write table with cumulative correlation coefficients and Bayes factors
 
 % Variable names
 columnVarNames = {'Aprime', 'VLMT_1to5', 'VLMT_Distractor', 'VLMT_5min', 'VLMT_30min', 'VLMT_1d', 'WMS_learn', 'WMS_30min', 'WMS_1d'};
